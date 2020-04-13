@@ -1,0 +1,36 @@
+<html>
+<head>
+<body bgcolor="sky blue">
+<center><h1>Programa Identificador de Numeros Primos</h1></center>
+
+
+<h3>Programa creado por Daniel Do Reis</h3>
+<title>Programa, Numeros Primos</title>  
+
+<script type="text/javascript"> //Lenguaje
+
+
+var numero = parseInt(prompt("Escriba un Numero")); // Lo primero es pedir un numero entero por eso el uso de parseInt
+if (numero<=1) document.write("<h1>Numero Invalido</h1>"); //Los numeros primos se inician en 2, en caso contrario es error
+if (numero>=10000) document.write("<h1>Numero Invalido</h1>");
+if (numero==2) document.write("<h1>Es Primo y Par</h1>"); //Si es 2, es un primo, el unico par primo
+else if (numero%2==0) document.write("<h1>No es Primo</h1>"); //Cualquier numero par es divisible entre 2 luego rapidamente se dicen que no son primos los pares
+else //Este es el proceso para determinar si un numero impar es primo
+{
+ esprimo = true; //Se cree que es primo, por eso se inicia en "true" (verdadero)
+ for (divide=3; divide<=Math.sqrt(numero) && esprimo; divide+=2)
+   if (numero%divide==0) esprimo = false; //Si el numero es dividido por algun otro numero no es primo
+ if (esprimo) document.write("<h1>El numero Ingresado Es Primo</h1>"); 
+ else document.write("<h1>El Numero Ingresado No es Primo</h1>");      //Si se mantuvo la variable "esprimo" en "true" significa que no se encontro divisor del numero
+ }
+ {
+   var texto="<img src='np.jpg' alt='Imagen' />"; //Imagen
+   document.writeln(texto);
+
+ }
+ 
+ 
+ </script>
+ </head>
+ 
+ </html>

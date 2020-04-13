@@ -1,0 +1,9 @@
+ (divide=3; divide<=Math.sqrt(numero) && esprimo; divide+=2)
+ 
+ (divide=3; //Inicia dividiendo entre 3 y avanzando en 2 en 2
+ 
+ divide<=Math.sqrt(numero)  //El limite de los divisores es la raiz cuadrada del numero
+ 
+ && esprimo;  //Si se detecta que el numero no es primo, no se continúa evaluando, ya sabemos que no es primo
+ 
+  divide+=2)  //El numero se intenta dividir por impares 3,5,7,9,11,13 porque ya de comprobo que 2 no lo divide
